@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace EmpWageComputation
 {
     class EmpWageComputation
     {
-        static void Main(string[] args)
+        public void EmpWage()
         {
             //Constants
             const int IS_FULLTIME = 1;

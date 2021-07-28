@@ -6,17 +6,6 @@ namespace EmpWageComputation
 {
     class EmpWageComputation
     {
-        //string companyName;
-        //int numOfWorkingDays;
-        //int wagePerHr;
-        //int maxHoursPerMonth;
-        //public EmpWageComputation(string companyName, int numOfWorkingDays, int wagePerHr, int maxHoursPerMonth)
-        //{
-        //    this.companyName = companyName;
-        //    this.numOfWorkingDays = numOfWorkingDays;
-        //    this.wagePerHr = wagePerHr;
-        //    this.maxHoursPerMonth = maxHoursPerMonth;
-        //}
         public void EmpWage(string companyName, int numOfWorkingDays, int wagePerHr, int maxHoursPerMonth)
         {
             //Constants

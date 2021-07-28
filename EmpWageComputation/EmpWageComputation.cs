@@ -6,14 +6,23 @@ namespace EmpWageComputation
 {
     class EmpWageComputation
     {
-        public void EmpWage()
+        //string companyName;
+        //int numOfWorkingDays;
+        //int wagePerHr;
+        //int maxHoursPerMonth;
+        //public EmpWageComputation(string companyName, int numOfWorkingDays, int wagePerHr, int maxHoursPerMonth)
+        //{
+        //    this.companyName = companyName;
+        //    this.numOfWorkingDays = numOfWorkingDays;
+        //    this.wagePerHr = wagePerHr;
+        //    this.maxHoursPerMonth = maxHoursPerMonth;
+        //}
+        public void EmpWage(string companyName, int numOfWorkingDays, int wagePerHr, int maxHoursPerMonth)
         {
             //Constants
             const int IS_FULLTIME = 1;
             const int IS_PARTTIME = 2;
-            const int NUM_OF_WORKING_DAYS = 20;
-            const int WAGE_PER_HR = 20;
-            const int MAX_HRS_IN_MONTH = 100;
+
             //Variables
             int empHrs = 0;
             int totalEmpHrs = 0;
@@ -21,7 +30,7 @@ namespace EmpWageComputation
 
             Random random = new Random();
             //Computation
-            while (totalEmpHrs <= MAX_HRS_IN_MONTH && totalWorkingDays <= NUM_OF_WORKING_DAYS)
+            while (totalEmpHrs <= maxHoursPerMonth && totalWorkingDays <= numOfWorkingDays)
             {
                 totalWorkingDays++;
                 int empCheck = random.Next(0, 3);
@@ -39,8 +48,8 @@ namespace EmpWageComputation
                 }
                 totalEmpHrs = totalEmpHrs + empHrs;
             }
-            int totalWage = totalEmpHrs * WAGE_PER_HR;
-            Console.WriteLine("Total Monthly Wage: " + totalWage);
+            int totalWage = totalEmpHrs * wagePerHr;
+            Console.WriteLine("Employee Total Monthly Wage of " + companyName + " Company is " + totalWage);
         }
     }
 }

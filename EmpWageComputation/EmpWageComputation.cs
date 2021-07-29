@@ -6,7 +6,16 @@ namespace EmpWageComputation
 {
     class EmpWageComputation
     {
-        public void EmpWage(string companyName, int numOfWorkingDays, int wagePerHr, int maxHoursPerMonth)
+        string companyName; int numOfWorkingDays,  wagePerHr, maxHoursPerMonth;
+        int totalWage;
+        public EmpWageComputation(string companyName, int numOfWorkingDays, int wagePerHr, int maxHoursPerMonth)
+        {
+            this.companyName = companyName;
+            this.numOfWorkingDays = numOfWorkingDays;
+            this.wagePerHr = wagePerHr;
+            this.maxHoursPerMonth = maxHoursPerMonth;
+        }
+        public int EmpWage()
         {
             //Constants
             const int IS_FULLTIME = 1;
@@ -37,8 +46,9 @@ namespace EmpWageComputation
                 }
                 totalEmpHrs = totalEmpHrs + empHrs;
             }
-            int totalWage = totalEmpHrs * wagePerHr;
-            Console.WriteLine("Employee Total Monthly Wage of " + companyName + " Company is " + totalWage);
+            totalWage = totalEmpHrs * wagePerHr;
+            return totalWage;
         }
+        
     }
 }

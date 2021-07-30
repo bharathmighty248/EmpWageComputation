@@ -15,7 +15,7 @@ namespace EmpWageComputation
             this.wagePerHr = wagePerHr;
             this.maxHoursPerMonth = maxHoursPerMonth;
         }
-        public int EmpWage()
+        public int EmpWage(List<int> dailyWage)
         {
             //Constants
             const int IS_FULLTIME = 1;
@@ -44,6 +44,7 @@ namespace EmpWageComputation
                         empHrs = 0;
                         break;
                 }
+                dailyWage.Add(empHrs * wagePerHr);
                 totalEmpHrs = totalEmpHrs + empHrs;
             }
             totalEmpWage = totalEmpHrs * wagePerHr;

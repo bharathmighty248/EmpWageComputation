@@ -4,10 +4,10 @@ using System.Text;
 
 namespace EmpWageComputation
 {
-    class CompanyEmpWage
+     class CompanyEmpWage
     {
         public string companyName; int numOfWorkingDays,  wagePerHr, maxHoursPerMonth;
-        int totalEmpWage;
+        public int totalEmpWage;
         public CompanyEmpWage(string companyName, int numOfWorkingDays, int wagePerHr, int maxHoursPerMonth)
         {
             this.companyName = companyName;
@@ -15,6 +15,7 @@ namespace EmpWageComputation
             this.wagePerHr = wagePerHr;
             this.maxHoursPerMonth = maxHoursPerMonth;
         }
+
         public int EmpWage(List<int> dailyWage)
         {
             //Constants

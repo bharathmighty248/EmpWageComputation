@@ -4,7 +4,7 @@ using System.Text;
 
 namespace EmpWageComputation
 {
-    class EmpWageBuilder
+    class EmpWageBuilder: IEmpWageBuilder
     {
         Dictionary<string, int> companiesWages = new Dictionary<string, int>();
         List<CompanyEmpWage> companyWageList = new List<CompanyEmpWage>();

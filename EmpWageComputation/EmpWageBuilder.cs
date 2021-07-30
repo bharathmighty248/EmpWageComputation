@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,7 +8,7 @@ namespace EmpWageComputation
     class EmpWageBuilder: IEmpWageBuilder
     {
         Dictionary<string, int> companiesWages = new Dictionary<string, int>();
-        List<CompanyEmpWage> companyWageList = new List<CompanyEmpWage>();
+        ArrayList companyWageList = new ArrayList();
         public void AddCompanyEmpWage(string companyName, int numOfWorkingDays, int wagePerHr, int maxHoursPerMonth)
         {
             CompanyEmpWage companyEmpWage = new CompanyEmpWage(companyName, numOfWorkingDays, wagePerHr, maxHoursPerMonth);

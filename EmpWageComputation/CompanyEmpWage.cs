@@ -4,11 +4,11 @@ using System.Text;
 
 namespace EmpWageComputation
 {
-    class EmpWageComputation
+    class CompanyEmpWage
     {
-        string companyName; int numOfWorkingDays,  wagePerHr, maxHoursPerMonth;
-        int totalWage;
-        public EmpWageComputation(string companyName, int numOfWorkingDays, int wagePerHr, int maxHoursPerMonth)
+        public string companyName; int numOfWorkingDays,  wagePerHr, maxHoursPerMonth;
+        int totalEmpWage;
+        public CompanyEmpWage(string companyName, int numOfWorkingDays, int wagePerHr, int maxHoursPerMonth)
         {
             this.companyName = companyName;
             this.numOfWorkingDays = numOfWorkingDays;
@@ -46,9 +46,8 @@ namespace EmpWageComputation
                 }
                 totalEmpHrs = totalEmpHrs + empHrs;
             }
-            totalWage = totalEmpHrs * wagePerHr;
-            return totalWage;
+            totalEmpWage = totalEmpHrs * wagePerHr;
+            return totalEmpWage;
         }
-        
     }
 }

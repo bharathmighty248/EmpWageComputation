@@ -6,9 +6,12 @@ namespace EmpWageComputation
     {
         static void Main(string[] args)
         {
-            EmpWageBuilder companies = new EmpWageBuilder();
-            companies.dmartempWageBuilder();
-            companies.relianceempWageBuilder();
+            EmpWageBuilder empWageBuilder = new EmpWageBuilder();
+            empWageBuilder.AddCompanyEmpWage("DMart", 20, 25, 100);
+            empWageBuilder.AddCompanyEmpWage("Reliance", 20, 30, 120);
+            empWageBuilder.ComputeEmpWage();
+            Console.WriteLine("Employee Total Wages for Dmart Company is: " + empWageBuilder.GetTotalWage("DMart"));
+            Console.WriteLine("Employee Total Wages for Reliance Company is: " + empWageBuilder.GetTotalWage("Reliance"));
         }
     }
 }
